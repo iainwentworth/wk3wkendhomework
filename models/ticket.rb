@@ -82,7 +82,7 @@ class Ticket
     # all_tickets = Ticket.all
     all_tickets = self.all
     number_of_tickets_sold_to_customer = 0
-    all_tickets.map { |ticket| if :customer_id == customer.id then number_of_tickets_sold_to_customer += 1 end}
+    all_tickets.map { |ticket| if ticket.customer_id == customer.id then number_of_tickets_sold_to_customer += 1 end}
     return "Customer has bought #{number_of_tickets_sold_to_customer} tickets"
   end
 

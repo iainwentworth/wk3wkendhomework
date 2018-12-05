@@ -12,7 +12,8 @@ customer1 = Customer.new({ 'name' => 'Iain', 'funds' => 100 })
 customer1.save()
 customer2 = Customer.new({ 'name' => 'John', 'funds' => 50 })
 customer2.save()
-
+customer3 = Customer.new({ 'name' => 'Adam', 'funds' => 20 })
+customer3.save()
 
 film1 = Film.new({ 'title' => 'The Matrix', 'price' => 7 })
 film1.save()

@@ -25,7 +25,7 @@ class Customer
     sql = "SELECT * FROM customers"
     values = []
     customers = SqlRunner.run(sql, values)
-    result = cusotmers.map { |customer| Customer.new(customer) }
+    result = customers.map { |customer| Customer.new(customer) }
     return result
   end
 
@@ -82,4 +82,12 @@ class Customer
       return @funds >= film.price()
     end
 
-end
+    def self.order_by_name()
+      sql = "SELECT * FROM customers ORDER BY name"
+      values = []
+      customers = SqlRunner.run(sql, values)
+      result = customers.map { |customer| Customer.new(customer) }
+      return result
+    end
+
+  end
